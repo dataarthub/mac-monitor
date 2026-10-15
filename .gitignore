@@ -1,0 +1,19 @@
+# Build artifacts
+.build/
+*.app/
+*.dSYM/
+*.zip
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Xcode / Development temporary files
+*.xcuserdata/
+xcuserdata/
+DerivedData/
+*.xcscmblueprint

@@ -869,6 +869,12 @@ struct Dashboard: View {
     }
 
     @objc private func wake() { monitor.refresh() }
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        monitor.refresh()
+        dashboardWindow.makeKeyAndOrderFront(nil)
+        sender.activate(ignoringOtherApps: true)
+        return false
+    }
     @objc private func toggle() {
         if dashboardWindow.isVisible { dashboardWindow.close() }
         else {
